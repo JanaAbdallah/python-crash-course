@@ -187,3 +187,29 @@ age = 22
 if 18 <= age <= 40:
     print("Ppp")
 # -----------------------------------------------------------------------------------------------------------------------------------
+# For Loops
+# we have a built in func called range() it loops according to the number we pass to it so here we wrote 3 so it gonna loop 3 times
+for num in range(3):
+    print("Attempt")
+
+for number in range(3):  # number is here is like the i "iterator" so we can print it
+    print(f"Attempt : {number}")
+
+# we can also do this
+for numb in range(1, 4):  # here instead of looping starting from  0 , here we gave it a range from 1 till 4 means it will stop at 3 it will loop till numb is = 4 then it will end the loop
+    # this going to print (.) numb+1 times
+    print("Attempt", numb, (numb+1) * ".")
+
+# we can do this
+for i in range(1, 10, 2):  # here instead of looping starting from  0 , here we gave it a range from 1 till 10 , and we've paased antoher value as the 3rd argument and this is the step value , means each iteration it will add 2 not 1
+    print("Attempt", i)
+
+# Break
+successful = False
+for c in range(3):
+    print("Attempt")
+    if successful:
+        print("Successful")
+        break
+else:
+    print("Attempted 3 times and fail")
