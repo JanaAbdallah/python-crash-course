@@ -254,3 +254,30 @@ while command != "quit":
 
 # -----------------------------------------------------------------------------------------------------------------------------------
 # Functions
+
+
+def greet(firstname, lastname):  # def -> define
+    print("Hi there")
+    print(f"Welcome on board,{firstname}")
+
+
+greet("Jana", "Abdallah")
+
+# Types of Functions
+# we have 2 types of functions -> function that perform a tas and func that calculates and return a value
+# 1- Perform a task
+# 2- Return a value
+
+
+def get_greeting(name_):
+    return f"Hi {name_}"
+
+
+message = get_greeting("jana")
+# we can write this message inside a file using open func
+file = open("content.txt", "w")  # w -> opened for writing
+file.write(message)
+print(message)
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+# Default Arguments
