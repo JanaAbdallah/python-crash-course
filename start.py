@@ -212,4 +212,29 @@ for c in range(3):
         print("Successful")
         break
 else:
-    print("Attempted 3 times and fail")
+    print("Attempted 3 times and failed")
+
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+# Nested Loops
+
+for x in range(5):
+    for y in range(3):
+        print(f"({x},{y})")
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+# range is a complex type
+print(type(range(5)))  # it's type is range
+
+# we can do this
+for x in "Python":  # x is gonna be each char in python , here we iterate over python
+    print(x)
+
+# we can do this
+for x in [1, 2, 3, 4]:  # we can iterate over each number in the list
+    print(x)
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+# while loops
+# We've learned that we use for loops to iterate over iterable objects
+# in python we have while loop and we use that tot repeat smth as long as the condition is true
