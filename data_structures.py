@@ -190,3 +190,24 @@ print(Ages)  # this will print [22, 30, 25]
 filtered = [item for item in items if item[1] > 25]
 # this will print [('John', 30)]
 print(filtered)
+
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+# Zip Function
+
+list1 = [1, 2, 3]
+list2 = [10, 20, 30]
+
+# We want to combine these two lists into a single list of tuples
+# to be like this [(1,10), (2,20), (3,30)]
+# to achieve this -> we can use the zip function
+zipped = zip(list1, list2)  # this will return a zip object
+print(list(zipped))  # this will print [(1, 10), (2, 20), (3, 30)]
+
+# We can combine with it another things like strings
+zipped2 = zip("Jana", list1, list2)
+# this will print [('J', 1, 10), ('a', 2, 20), ('n', 3, 30)]
+print(list(zipped2))
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+# Stacks
