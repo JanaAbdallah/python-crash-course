@@ -239,3 +239,20 @@ queue.popleft()  # this will remove the first item in the queue
 print(queue)  # this will print the queue after removing the first item
 if not queue:  # this will check if the queue is empty
     print("Queue is empty")  # this will print if the queue is empty
+
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+# Tuples
+
+# Tuples are immutable lists, meaning we cannot change their content after creation
+point = (1, 2)  # Tuple
+point = (1, 2) * 3  # this will create a tuple with 3 copies of (1, 2)
+print(point)  # this will print (1, 2, 1, 2, 1, 2)
+print(point[0])  # this will print 1
+
+x, y, z, e, r, f = point
+if 10 in point:  # this will check if 10 is in the tuple
+    print("10 is in the tuple")  # this will print if 10 is in the tuple
+
+
+# -----------------------------------------------------------------------------------------------------------------------------------
