@@ -1,4 +1,5 @@
 # List
+from array import array
 from collections import deque
 letters = ["a", "b", "c", "d", "e"  "f", "g", "h", "i", "j"]
 
@@ -256,3 +257,47 @@ if 10 in point:  # this will check if 10 is in the tuple
 
 
 # -----------------------------------------------------------------------------------------------------------------------------------
+# Arrays
+
+# Arrays are like lists but they are more efficient in terms of memory usage and performance
+# We can use the array module to create arrays
+numbers = array("i", [1, 2, 3, 4, 5])  # this will create an array of integers
+
+numbers.append(6)  # this will add 6 to the end of the array
+numbers.insert(2, 7)  # this will add 7 at index 2 in the array
+print(numbers)  # this will print the array
+
+numbers.remove(3)  # this will remove the first occurrence of 3 in the array
+print(numbers)  # this will print the array after removing 3
+
+numbers.pop()  # this will remove the last item in the array
+print(numbers)  # this will print the array
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+# Sets -> a collection with no duplicates
+
+redundantL = {1, 1, 2, 3, 4, 5}
+# this will create a set from the list, removing duplicates
+
+uniques = set(redundantL)
+print(uniques)  # this will print {1, 2, 3, 4, 5}
+# Sets are unordered collections of unique elements
+
+# We can add items to a set using the add method
+uniques.add(6)  # this will add 6 to the set
+
+Second = {10, 9}
+# we can combine the 2 sets using this " | " operator " Union "
+print(uniques | Second)  # this will print {1, 2, 3, 4, 5, 6, 9, 10}
+
+# & operator is used for intersection
+print(uniques & Second)  # this will print an empty set since there are no
+
+# - operator is used for difference
+print(uniques - Second)  # this will print {1, 2, 3, 4, 5, 6}
+
+# in sets it doesn't support indexing or slicing
+
+# we can check if an item exists in a set using the in keyword
+if 1 in uniques:  # this will check if 1 is in the set
+    print("1 is in the set")  # this will print if 1 is in the set
