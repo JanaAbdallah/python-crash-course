@@ -281,3 +281,73 @@ print(message)
 
 # -----------------------------------------------------------------------------------------------------------------------------------
 # Default Arguments
+# we can make a specific argument as an optional argument, by making it have a default value
+
+
+def increment(number, by=1):  # here we make the default value of by=1 , if the user doesn't change it
+    return number+by
+
+
+print(increment(6))
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+# sometimes we need to create a function that takes a variable number of arguments
+
+
+def multiply(x, y):
+    return x*y
+
+# but if we want pass mutliply(.,.,.,.) we will not able to do this bec it takes 2 args
+# but if we make this multiply(*numbers)
+
+
+def mult(*numbers):
+    print(numbers)
+
+
+mult(2, 3, 4, 5, 6, 7)
+
+# using ** -> when we use ** we can pass to the func multiple key value pairs or multiple keyword args to a func and python will store them into a dictionary
+
+
+def save_user(**user):
+    print(user)
+
+
+save_user(id=1, name="Jana", age=22)  # this will print a dictionary
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+# Fizz-Buzz Problem
+# if the input we got is divisible by 3, return "Fizz"
+# if the input is divisible by 5, return "Buzz"
+# if the input is divisible by both 3 and 5, return "FizzBuzz"
+# otherwise, return the input number itself
+# this is a common interview question to test the basic understanding of control flow and logic in programming
+
+
+def fizz_buzz(input):
+    input = int(input)  # ensure input is an integer
+    input_str = "Fizz" if input % 3 == 0 else "Buzz" if input % 5 == 0 else str(
+        input)
+    return input_str
+
+
+# testing the fizz_buzz function
+print(fizz_buzz(15))  # should return "FizzBuzz"
+print(fizz_buzz(9))   # should return "Fizz"
+print(fizz_buzz(10))  # should return "Buzz"
+print(fizz_buzz(7))   # should return "7"
+
+# -----------------------------------------------------------------------------------------------------------------------------------
+
+
+def multiplyyy(*numbers):
+    total = 1
+    for number in numbers:
+        total *= number
+    return total
+
+
+print("Start")
+# this will print the multiplication of all numbers
+print(multiplyyy(2, 3, 4, 5, 6, 7))
