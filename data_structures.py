@@ -1,4 +1,5 @@
 # List
+from collections import deque
 letters = ["a", "b", "c", "d", "e"  "f", "g", "h", "i", "j"]
 
 # We can have a list of lists
@@ -210,4 +211,31 @@ zipped2 = zip("Jana", list1, list2)
 print(list(zipped2))
 
 # -----------------------------------------------------------------------------------------------------------------------------------
-# Stacks
+# Stacks "LIFO"
+
+browsing_history = []
+browsing_history.append("google.com")
+browsing_history.append("stackoverflow.com")
+browsing_history.append("github.com")
+
+print(browsing_history)  # this will print the browsing history
+browsing_history.pop()  # this will remove the last item in the list
+# this will print the browsing history after removing the last item
+print(browsing_history)
+# this will return the last item in the list without removing it
+browsing_history[-1]
+if not browsing_history:  # this will check if the list is empty
+    print("No browsing history")  # this will print if the list is empty
+# -----------------------------------------------------------------------------------------------------------------------------------
+# Queues "FIFO"
+
+# We will use DQ object by importing it from collections module
+queue = deque([])
+queue.append("Task 1")
+queue.append("Task 2")
+queue.append("Task 3")
+print(queue)  # this will print the queue
+queue.popleft()  # this will remove the first item in the queue
+print(queue)  # this will print the queue after removing the first item
+if not queue:  # this will check if the queue is empty
+    print("Queue is empty")  # this will print if the queue is empty
